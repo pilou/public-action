@@ -1,9 +1,5 @@
 FROM alpine
 
-RUN apk add --no-cache curl ca-certificates
-
-ADD entrypoint.sh /entrypoint.sh
-
-RUN chmod +x /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
